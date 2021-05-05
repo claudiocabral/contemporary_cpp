@@ -33,6 +33,7 @@ auto get_message(int message_index)
     case 2: [[fallthrough]];
     case 3: return "same message for first 4 indices";
     case 4: return "some other message";
+    // case 5: ++message_index;
     default:
       return "unknown index";
   }
@@ -63,6 +64,7 @@ struct A {
   int a;
   [[no_unique_address]] Empty e;
 // sizeof A can potentially optimize member e out, aka sizef(A) == sizeof(int)
+// similar to empty base optimization
 };
 
 

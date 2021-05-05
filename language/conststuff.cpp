@@ -39,3 +39,29 @@ auto func(int runtime_value)
   // No on MSVC; error C7595: 'f': call to immediate function is not a constant expression
 }
 
+template <class T>
+auto copy(T & dest, T & source)
+{
+  // removes a lot of noise from compilation
+  // replaces SFINAE in any contexts
+  if constexpr(std::is_trivially_copyable_v<T>)
+  {
+    memcpy(dest, source, sizeof(T));
+  }
+  else if (true)
+  {
+    dest = source;
+  }
+  else
+  {
+    static_assert(std::is_same_v<T, T>, "error");
+  }
+} // see tab 3 for serious example
+
+// C++20
+constexpr auto new_available()
+{
+  auto a = new int[42];
+  delete[] a;
+  std::vector v{1, 2, 3, 4};
+}

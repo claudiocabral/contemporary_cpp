@@ -3,9 +3,9 @@
 
 auto f()
 {
-  std::string str = std::format(
-      "{}, {}!!!! feel the freedom from %s and %d\n",
+  std::string str = std::format("{}, {}!!!! feel the freedom from %s and %d\n in C++{}",
       "Hello",
-      std::string_view{"world"}
+      std::string_view{"world"},
+      20
       )
 }
