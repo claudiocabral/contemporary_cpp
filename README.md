@@ -5,7 +5,7 @@ It has been al ong decade filled with innovation, questionable decisions
 and enough confusion to keep consultatns employed for the next century.
 
 This contains a list of what I consider good to know things about C++
-as it existis in 2021. I plan add more thing entries as time passes
+as it exists in 2021. I plan to add more entries as time passes
 
 ## [Tooling](tools.md)
 * Compiler explorer
@@ -43,7 +43,7 @@ don't use lists.
 - `std::span`
 
 ### Algebraic types
-- std::option
+- std::optional
 - std::variant
 
 ### (Smart Pointers)[stdlib/smart_ptr.cpp]
